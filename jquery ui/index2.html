@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript"  src="jquery.js">
+        </script>
+        <script type="text/javascript" src="jquery-ui.js">
+            </script>
+            
+     <link rel="stylesheet" type="text/css" href="jquery-ui.css">
+     <style>
+        #sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+        #sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; font-size: 4em; text-align: center; }
+        </style>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="style2.css">
+            <script>
+   $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  $('#send_all').bind({
+    'click': function(){ 
+        $('#sortable1 li').each(function(){
+            $(this).appendTo('#sortable2');
+        });
+        $tabs.tabs('select', 1 );
+    }
+});
+
+
+            </script>
+    </head>
+
+    <body>
+    
+
+        <ul id="sortable">
+            <li class="ui-state-default"> <img class="images" src="jacket1.jpg">                 </li>
+            <li class="ui-state-default">       <img class="images"src="jacket2.jpg">               </li>
+            <li class="ui-state-default">  <img class="images"src="jacket2.jpg">                     </li>
+            <li class="ui-state-default">      <img class="images"src="jacket2.jpg">   </li>
+            <li class="ui-state-default">     <img class="images" src="jacket2.jpg">   </li>
+            <li class="ui-state-default"> <img class="images" src="jacket2.jpg">   </li>
+            <li class="ui-state-default"> <img class="images" src="jacket2.jpg">   </li>
+            <li class="ui-state-default"> <img class="images" src="jacket2.jpg">   </li>
+            <li class="ui-state-default"> <img class="images" src="jacket2.jpg">   </li>
+            <li class="ui-state-default"> <img class="images" src="jacket2.jpg">   </li>
+            <li class="ui-state-default"><img class="images" src="jacket2.jpg">   </li>
+            <li class="ui-state-default"> <img  class="images"src="jacket2.jpg">   </li>
+          </ul>
+    </body>
+
+
+
+</html>

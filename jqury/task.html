@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="task2.css">
+
+<title></title>
+<script src="jquery.js">
+</script>
+
+<script>
+     $("document").ready(function(){
+        $("#btn1").click(function(){
+        $("#div1").show(2000);
+
+
+    });
+
+    $("#btn3").click(function(){
+        
+        $("#js").css("border" ,"2px solid green");
+        $("#html").css("border" ,"2px solid red");
+        $("#css").css("border" ,"2px solid red");
+
+
+
+        
+
+        });
+        
+
+});
+
+$("#ramtha").hover(function(){
+ $("#kabab").css("border","2px solid green");
+    $("#mountine").css("border","none");
+    $("#malls").css("border","none");
+
+
+});
+
+$("#irbid").hover(function(){
+    $("#mountine").css("border","2px solid green");
+    $("#malls").css("border","none");
+    $("#kabab").css("border","none");
+
+
+});
+
+
+$("#salt").hover(function(){
+    $("#mountine").css("border","2px solid green");
+    $("#malls").css("border","none");
+    $("#kabab").css("border","none");
+
+
+});
+
+
+
+
+
+ 
+
+   
+</script>
+    </head>
+    <body>
+        <label> what is htu </label>
+       <button id="btn1"> shoow </button>
+       <div id="div1"> htu university</div>
+
+     <p>
+       <label id="js"><input type="radio" name="javascript" value="js">js</label> 
+       <label id="html"><input type="radio" name="html" value="html">html</label>
+       <label id="css"><input type="radio" name="css" value="css">css</label> 
+   </p>
+   <p><input type="button" id="btn3">  </p>
+
+    <table>
+        <tr> 
+            <td id="ramtha"> ramtha</td>
+            <td id="mountine"> mountine</td>
+        </tr>
+
+        <tr> 
+            <td id="irbid"> irbid</td>
+            <td id="malls"> malls</td>
+        </tr>
+
+        <tr> 
+            <td id="salt"> salt</td>
+            <td id="kabab"> kabab</td>
+        </tr>
+
+    </table>
+
+     
+
+    </body>
+</html>

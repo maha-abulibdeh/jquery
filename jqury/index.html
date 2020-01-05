@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <script src="jquery.js">
+    </script> 
+    <script>
+    $("document").ready(function(){
+        $("div").css("color","red");
+         $(" table tr:first").css("background-color","black");
+         $(" table tr:odd").css("background-color","gray");
+
+         $("#one").html("<h1> HTU</h1>");
+    $("#one").append("welcome");
+    $("#one").prepend("to");
+ 
+    $("#one").before("welcome");
+    $("#one").after("to");
+    $("a").attr("target","_blank");
+    $("p").remove(".test");
+    $("#btn1").click(function(){
+        $("div").hide(1000);
+    });
+    $("#btn1").click(function(){
+        $("div").show(1000);
+    });
+    $("#btn1").click(function(){
+        $("div").toggle(1000);
+    });
+    $(".btn2").click(function(){
+    $("p").fadeOut();
+  });
+  $(".btn3").click(function(){
+    $("p").fadeIn();
+  });
+
+    });
+ 
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    <button id="btn1">Hide</button>
+    <a href="">test</a>
+    <p>google</p>
+    <div id="one"> thid is first div </div>
+    <div id="one"> thid is first div </div>   <div id="one"> thid is first div </div>
+<table border="3" class="jquery">
+    <tr>
+        <td>
+            123
+        </td>
+        <td>
+            3456
+        </td>
+        <td>
+            123
+        </td>
+        
+    </tr>
+    <tr> <td> 1233<td> 2344</td></td> <td>444</td></tr>
+    <tr> <td>2345 <td> 4444</td></td> <td>4433</td></tr>
+    <tr> <td> 4444<td> </td></td> <td>4444</td></tr>
+
+</table>
+
+
+<p>This is a paragraph.</p>
+
+<button class="btn2">Fade out</button>
+<button class="btn3">Fade in</button>
+
+</body>
+</html>

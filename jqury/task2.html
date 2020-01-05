@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="fontawesome-free-5.11.2-web/css/all.css">
+	<style type="text/css">
+		tr{
+			height: 40px;
+		}
+		table{
+			border-spacing: 0;
+		}
+#outer{
+	margin-left: 20%;
+	margin-right: 20%;
+
+}
+#one, #two, #cities, #selectt, #calc,#textar,#in{
+	padding-top: 20px;
+	margin-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 30px;
+}
+#add, #sub, #mul,#divi{
+	float: right;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+form{
+	margin-bottom: 10px;
+}
+#word_count{
+	width: 400px;
+	height: 100px;
+}
+
+#toTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #99ccff
+;
+  
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    
+    border-radius: 35px;
+    display: none;
+    
+}
+#toTop i {
+    color:black;
+;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+
+}
+#toTop:hover {
+    background: gray;
+;
+}
+#toTop:hover i {
+    color: black;
+;
+    top: 5px;
+}
+	</style>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$("document").ready(function(){
+		/*	$("div:even").css({"color": "hotpink", "background-color": "lightblue"});
+			$("tr:odd").css({ "background-color": "lightgrey" });	
+			
+			$("tr:first").css({ "background-color": "black"});	
+			$("#one").html("HTU");
+			$("#one").append(" welcome");
+			$("#one").prepend("To ");
+			$("#one").after("welcome ");
+			$("#one").before("Hello ");
+			$("a").attr("target","_blank");
+			$("a").removeAttr("href");*/
+
+$("#btn").css({"background-color":"#black","color":"black","border":"2px solid white","margin-top"
+:"20px"});
+$("#accept").css({"background-color":"#660033","color":"white","border":"2px solid white","margin-top"
+:"20px"});
+
+$("#add").css({"background-color":"#660033","color":"white","border":"2px solid white","margin-top"
+:"20px"});
+$("#sub").css({"background-color":"#660033","color":"white","border":"2px solid white","margin-top"
+:"20px"});
+$("#mul").css({"background-color":"#660033","color":"white","border":"2px solid white","margin-top"
+:"20px"});
+$("#divi").css({"background-color":"#660033","color":"white","border":"2px solid white","margin-top"
+:"20px"});
+
+
+
+
+
+
+			$("#btn").click(function(){
+				/*$("div").hide(2000);*/
+				//$("div").toggle(1000);
+				//$("div").slideToggle(1000);
+				//$("div").fadeToggle(1000);
+	/*			$( "div" ).animate({
+    width: [ "toggle", "swing" ],
+    height: [ "toggle", "swing" ],
+    opacity: "toggle"
+  }, 5000, "linear", function() {
+    $( this ).after( "<div>Animation complete.</div>" );
+});*/
+ /* $( "div" ).animate({
+    opacity: 0.25,
+    left: "+=50",
+    height: "toggle"
+  }, 5000, function() {
+    // Animation complete.
+  });
+  */
+  $("#one").append(" HTU is a UNIVERSITY ");
+});
+
+			$("#test").click(function(){
+				if($('#js').is(':checked')) { $("#js + label").css("border","1px solid gray"); 
+				$("#html + label").css("border","1px solid black");
+				$("#css + label").css("border","1px solid black");}else if($('#html').is(':checked')) { $("#js + label").css("border","1px solid gray"); 
+				$("#html + label").css("background-color","#ff4d4d");
+				$("#css + label").css("background-color","#ff4d4d");} else if($('#css').is(':checked')) { $("#js + label").css("background-color","#99ff66"); 
+				$("#html + label").css("background-color","#ff4d4d");
+				$("#css + label").css("background-color","#ff4d4d");}
+
+
+			});
+
+			$("#ramtha").mouseover(function(){
+				$("#kbab").css("background-color","#99ff66");
+				$("#ramtha").css("background-color","#99ff66");
+			});
+			$("#ramtha").mouseout(function(){
+				$("#kbab").css("background-color","lightpink");
+				$("#ramtha").css("background-color","lightpink");
+			});
+
+
+			$("#irbid").mouseover(function(){
+				$("#olive").css("background-color","#99ff66");
+				$("#irbid").css("background-color","#99ff66");
+			});
+			$("#irbid").mouseout(function(){
+				$("#olive").css("background-color","lightpink");
+				$("#irbid").css("background-color","lightpink");
+			});
+
+			$("#salt").mouseover(function(){
+				$("#mount").css("background-color","#99ff66");
+				$("#salt").css("background-color","#99ff66");
+			});
+			$("#salt").mouseout(function(){
+				$("#mount").css("background-color","lightpink");
+				$("#salt").css("background-color","lightpink");
+			});
+
+			$("#amman").mouseover(function(){
+				$("#mall").css("background-color","#99ff66");
+				$("#amman").css("background-color","#99ff66");
+			});
+			$("#amman").mouseout(function(){
+				$("#mall").css("background-color","lightpink");
+				$("#amman").css("background-color","lightpink");
+			});
+
+$("#Jcty").hide();
+			$("#Qcty").hide();
+			$("#state").hide();
+			$("#province").hide();
+
+
+$("#cnt").change(function () {
+
+                 var country = $("#cnt option:selected").val();   
+                    if(country == "2") {
+$("#Jcty").show();
+$("#Qcty").hide();
+			$("#state").hide();
+			$("#province").hide();
+                    } else if(country == "3") {
+
+	$("#state").show();
+		$("#province").show();
+		$("#Jcty").hide();
+			$("#Qcty").hide();
+                    } else if(country=="4") {
+$("#Qcty").show();
+			$("#Jcty").hide();
+			$("#state").hide();
+			$("#province").hide();
+                    }
+                  
+
+
+
+                });
+
+
+
+$("#add").click(function(){
+var n1 = parseInt($( "#no1" ).val());
+var n2 =parseInt( $( "#no2" ).val());
+var sum =  n1 +  n2;
+
+$("#result").val(sum);
+
+});
+$("#sub").click(function(){
+var n1 = parseInt($( "#no1" ).val());
+var n2 =parseInt( $( "#no2" ).val());
+var sum =  n1 -  n2;
+
+$("#result").val(sum);
+
+});
+$("#mul").click(function(){
+var n1 = parseInt($( "#no1" ).val());
+var n2 =parseInt( $( "#no2" ).val());
+var sum =  n1 *  n2;
+
+$("#result").val(sum);
+
+});
+$("#divi").click(function(){
+var n1 = parseInt($( "#no1" ).val());
+var n2 =parseInt( $( "#no2" ).val());
+var sum =  n1 /  n2;
+
+$("#result").val(sum);
+
+});
+
+
+// $('input[type="submit"]').click( function() {
+//     var words = $('#name').val().split(' ');
+//     alert(words.length);
+// });
+
+
+$("#word_count").on('keyup', function(e) {
+    var value = $('textarea').val();
+                var wordCount = 0;
+
+                if(value == ""){
+                    $('textarea').empty();
+                }
+                else{
+
+                    var regex = /\s+/gi;
+                    var wordCount = value.trim().replace(regex, ' ').split(' ').length;
+                }
+
+                    if(wordCount > 16){
+                     var trimmed = $(this).val().split(/\s+/,16).join(" ");
+                    $(this).val(trimmed + " ");
+            }
+            else{
+                $('#display_count').html(16- wordCount +" words left");
+            }
+
+
+         
+});
+
+ $('#accept').hide();
+ $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $('#accept').show();
+            }else{
+            	$('#accept').hide();
+            }
+          
+        });
+
+
+$(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('#toTop').fadeIn();
+    } else {
+        $('#toTop').fadeOut();
+    }
+});
+$("#toTop").click(function () {
+   //1 second of animation time
+   //html works for FFX but not Chrome
+   //body works for Chrome but not FFX
+   //This strange selector seems to work universally
+   $("html, body").animate({scrollTop: 0}, 1000);
+});
+
+
+ var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+
+    var x = 1; //initlal text box count
+    $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+            x++; //text box increment
+            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field"><i class="fas fa-minus-circle"></i></a></div>'); //add input box
+        }
+    });
+
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+    })
+
+
+	// $("#jrd").change(function(){
+			// var ccountry =	$("#cnt").val();
+			// console.log(country);
+			// 	$("#Jcty").show();
+
+
+			// });
+			// $("#qtr").change(function(){
+			// 	$("#Qcty").show();
+
+
+			// });
+			// $("#usa").change(function(){
+			// 	$("#state").show();
+			// 	$("#province").show();
+
+			// });
+
+		});
+
+
+
+	</script>
+</head>
+<body>
+	<div id="outer">
+	<div id="one">Q1:what is HTU?
+		<br>
+		<button id="btn">Show</button></div>
+
+	<br>
+	<br>
+
+	<div id="two">Q2:what is Jquery?<br>
+	<input type="radio" name="" id="js" ><label>JS </label><br>
+	<input type="radio" name="" id="html"><label>HTML</label> <br>
+	<input type="radio" name="" id="css"><label>CSS </label><br>
+
+	<button id="test">Test Answer</button>
+</div>
+	<br><br>
+	<div style="display: flex;" id="cities">
+		<div style="margin-right: 50px;">
+			<div id="ramtha">Ramtha</div>
+			<div id="irbid">Irbid</div>
+			<div id="salt">Salt</div>
+			<div id="amman">Amman</div>
+		</div>
+
+		<div>
+			<div id="mount">Mountains</div>
+			<div id="mall">Mall</div>
+			<div id="kbab">Kubab</div>
+			<div id="olive">Olive</div>
+		</div>
+	</div>
+
+	<br><br>
+<div id="selectt">
+	<div id="cnt">Country <select>
+		<option value="1"></option>
+		<option id="jrd" value="2">Jordan</option>
+		<option id="usa"  value="3">USA</option>
+		<option id="qtr"  value="4">Qatar</option>
+	</select></div>
+	<div id="Jcty">City<select>
+		<option >Irbid</option>
+		<option>Amman</option>
+		<option >Salt</option>
+		<option>Zarqa</option>
+		<option>Aqaba</option>
+	</select></div>
+	<div id="Qcty">City<select>
+		<option >Doha</option>
+		<option>Dukhan</option>
+		<option >Ar Rakiyat</option>
+		<option>Dukhan</option>
+		<option>Ar Rakiyat</option>
+	</select></div>
+
+	<div id="state">State<select>
+		<option >Doha</option>
+		<option>Dukhan</option>
+		<option >Ar Rakiyat</option>
+		<option>Dukhan</option>
+		<option>Ar Rakiyat</option>
+	</select></div>
+	<div id="province">State Province<select>
+		<option >Doha</option>
+		<option>Dukhan</option>
+		<option >Ar Rakiyat</option>
+		<option>Dukhan</option>
+		<option>Ar Rakiyat</option>
+	</select></div>
+	</div>
+
+
+	<div id="calc">
+		<form>
+			<label>#Number1</label>
+			<input type="number" name="" id="no1">
+			<label>#Number2</label>
+			<input type="number" name="" id="no2">
+			<br>
+			<button type="button" id="add">+</button>
+		<button type="button" id="sub" >-</button>
+		<button type="button" id="mul">*</button>
+		<button type="button" id="divi">/</button>
+		</form>
+		<label>Result</label><input type="number" name="" id="result" >
+	</div>
+
+	<div id="textar">
+		<form>
+		<textarea name="txtScript" id="word_count" cols="1" rows="1"></textarea><br>
+<span id="display_count">0</span> words.
+<br>
+<br>
+<input type="checkbox" name="" id="checked" >I accept the terms.
+<input type="submit" value="submit " id="accept">
+</form>
+	</div>
+	
+<a href="javascript:" id="toTop"><i class="fas fa-snowflake"></i></a>
+
+
+
+
+
+
+
+
+<div id="in">
+<div class="input_fields_wrap">
+    <button class="add_field_button">Add More Fields</button>
+    <div><input type="text" name="mytext[]"></div>
+</div>
+</div>
+</div>
+	
+</body>
+</html>
